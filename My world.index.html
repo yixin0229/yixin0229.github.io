@@ -1,0 +1,755 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+  <title>Yixin Jiang \'97 Instructional Designer</title>\
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>\
+  <style>\
+    *, *::before, *::after \{ box-sizing: border-box; margin: 0; padding: 0; \}\
+\
+    :root \{\
+      --cream: #fdf6ee;\
+      --sand: #e8d5b7;\
+      --terracotta: #c1694f;\
+      --terra-light: #e08060;\
+      --terra-dark: #9e4f38;\
+      --warm-brown: #4a2e1a;\
+      --muted: #8a7060;\
+      --white: #fff;\
+    \}\
+\
+    html \{ scroll-behavior: smooth; \}\
+\
+    body \{\
+      font-family: 'DM Sans', sans-serif;\
+      background-color: var(--cream);\
+      color: var(--warm-brown);\
+      overflow-x: hidden;\
+    \}\
+\
+    /* \uc0\u9472 \u9472  NAV \u9472 \u9472  */\
+    nav \{\
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;\
+      display: flex; justify-content: space-between; align-items: center;\
+      padding: 1.25rem 4rem;\
+      background: rgba(253,246,238,0.85);\
+      backdrop-filter: blur(10px);\
+      border-bottom: 1px solid rgba(193,105,79,0.12);\
+    \}\
+    .nav-logo \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1.2rem;\
+      color: var(--terracotta);\
+      text-decoration: none;\
+      letter-spacing: 0.02em;\
+    \}\
+    .nav-links \{ display: flex; gap: 2.5rem; list-style: none; \}\
+    .nav-links a \{\
+      text-decoration: none;\
+      font-size: 0.9rem;\
+      font-weight: 500;\
+      color: var(--muted);\
+      letter-spacing: 0.04em;\
+      text-transform: uppercase;\
+      transition: color 0.2s;\
+    \}\
+    .nav-links a:hover \{ color: var(--terracotta); \}\
+\
+    /* \uc0\u9472 \u9472  HERO \u9472 \u9472  */\
+    .hero \{\
+      min-height: 100vh;\
+      display: grid;\
+      grid-template-columns: 1fr 1fr;\
+      padding-top: 80px;\
+      position: relative;\
+      overflow: hidden;\
+    \}\
+\
+    /* Decorative background blob */\
+    .hero::before \{\
+      content: '';\
+      position: absolute;\
+      top: -10%; right: -5%;\
+      width: 55vw; height: 55vw;\
+      border-radius: 50%;\
+      background: radial-gradient(circle, #e9c9a8 0%, #f5dfc5 40%, transparent 70%);\
+      opacity: 0.5;\
+      pointer-events: none;\
+    \}\
+\
+    .hero-left \{\
+      display: flex;\
+      flex-direction: column;\
+      justify-content: center;\
+      padding: 4rem 3rem 4rem 5rem;\
+      animation: fadeUp 0.9s ease both;\
+    \}\
+\
+    .hero-tag \{\
+      display: inline-flex; align-items: center; gap: 0.5rem;\
+      font-size: 0.78rem; font-weight: 500;\
+      letter-spacing: 0.12em; text-transform: uppercase;\
+      color: var(--terracotta);\
+      background: rgba(193,105,79,0.1);\
+      border: 1px solid rgba(193,105,79,0.25);\
+      border-radius: 100px;\
+      padding: 0.35rem 1rem;\
+      margin-bottom: 1.8rem;\
+      width: fit-content;\
+    \}\
+    .hero-tag::before \{\
+      content: '';\
+      width: 6px; height: 6px;\
+      background: var(--terracotta);\
+      border-radius: 50%;\
+      animation: pulse 2s infinite;\
+    \}\
+\
+    @keyframes pulse \{\
+      0%, 100% \{ opacity: 1; transform: scale(1); \}\
+      50% \{ opacity: 0.5; transform: scale(0.8); \}\
+    \}\
+\
+    .hero-heading \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);\
+      line-height: 1.15;\
+      color: var(--warm-brown);\
+      margin-bottom: 1.5rem;\
+    \}\
+    .hero-heading em \{\
+      font-style: italic;\
+      color: var(--terracotta);\
+    \}\
+\
+    .hero-sub \{\
+      font-size: 1.05rem;\
+      line-height: 1.75;\
+      color: var(--muted);\
+      max-width: 480px;\
+      margin-bottom: 2.5rem;\
+    \}\
+\
+    .hero-ctas \{ display: flex; gap: 1rem; flex-wrap: wrap; \}\
+\
+    .btn-primary \{\
+      display: inline-flex; align-items: center; gap: 0.5rem;\
+      background: var(--terracotta);\
+      color: var(--white);\
+      text-decoration: none;\
+      padding: 0.85rem 2rem;\
+      border-radius: 100px;\
+      font-size: 0.92rem;\
+      font-weight: 500;\
+      transition: background 0.25s, transform 0.2s;\
+      box-shadow: 0 4px 20px rgba(193,105,79,0.3);\
+    \}\
+    .btn-primary:hover \{ background: var(--terra-dark); transform: translateY(-2px); \}\
+\
+    .btn-secondary \{\
+      display: inline-flex; align-items: center; gap: 0.5rem;\
+      background: transparent;\
+      color: var(--warm-brown);\
+      text-decoration: none;\
+      padding: 0.85rem 2rem;\
+      border-radius: 100px;\
+      font-size: 0.92rem;\
+      font-weight: 500;\
+      border: 1.5px solid var(--sand);\
+      transition: border-color 0.25s, transform 0.2s;\
+    \}\
+    .btn-secondary:hover \{ border-color: var(--terracotta); transform: translateY(-2px); \}\
+\
+    /* Stats row */\
+    .hero-stats \{\
+      display: flex; gap: 2.5rem;\
+      margin-top: 3.5rem;\
+      padding-top: 2rem;\
+      border-top: 1px solid rgba(193,105,79,0.15);\
+    \}\
+    .stat-item \{ display: flex; flex-direction: column; gap: 0.2rem; \}\
+    .stat-num \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1.8rem;\
+      color: var(--terracotta);\
+      line-height: 1;\
+    \}\
+    .stat-label \{\
+      font-size: 0.78rem;\
+      text-transform: uppercase;\
+      letter-spacing: 0.08em;\
+      color: var(--muted);\
+    \}\
+\
+    /* \uc0\u9472 \u9472  HERO RIGHT \'97 photo + floating cards \u9472 \u9472  */\
+    .hero-right \{\
+      display: flex;\
+      align-items: center;\
+      justify-content: center;\
+      padding: 5rem 4rem 4rem 2rem;\
+      position: relative;\
+      animation: fadeUp 0.9s 0.2s ease both;\
+    \}\
+\
+    .photo-frame \{\
+      position: relative;\
+      width: 340px; height: 400px;\
+      flex-shrink: 0;\
+    \}\
+\
+    .photo-bg \{\
+      position: absolute;\
+      inset: 0;\
+      border-radius: 200px 200px 160px 160px;\
+      background: linear-gradient(145deg, #e8c9a0, #d4956a);\
+      z-index: 0;\
+    \}\
+\
+    .photo-placeholder \{\
+      position: absolute;\
+      inset: 12px;\
+      border-radius: 188px 188px 148px 148px;\
+      background: linear-gradient(160deg, #f0d5b5 0%, #c8845a 100%);\
+      z-index: 1;\
+      overflow: hidden;\
+      display: flex;\
+      flex-direction: column;\
+      align-items: center;\
+      justify-content: flex-end;\
+    \}\
+\
+    /* Silhouette */\
+    .photo-placeholder::before \{\
+      content: '';\
+      position: absolute;\
+      bottom: 0; left: 50%;\
+      transform: translateX(-50%);\
+      width: 160px; height: 230px;\
+      background: linear-gradient(180deg, #a0603a 0%, #7a4020 100%);\
+      border-radius: 80px 80px 0 0;\
+      z-index: 1;\
+    \}\
+    .photo-placeholder::after \{\
+      content: '';\
+      position: absolute;\
+      bottom: 170px; left: 50%;\
+      transform: translateX(-50%);\
+      width: 90px; height: 90px;\
+      background: linear-gradient(180deg, #e8b88a 0%, #c8845a 100%);\
+      border-radius: 50%;\
+      z-index: 2;\
+    \}\
+\
+    .photo-hint \{\
+      position: absolute;\
+      bottom: 1rem; left: 50%;\
+      transform: translateX(-50%);\
+      z-index: 5;\
+      font-size: 0.7rem;\
+      color: rgba(255,255,255,0.7);\
+      white-space: nowrap;\
+      letter-spacing: 0.05em;\
+    \}\
+\
+    /* Floating info cards */\
+    .float-card \{\
+      position: absolute;\
+      background: var(--white);\
+      border-radius: 16px;\
+      padding: 0.9rem 1.2rem;\
+      box-shadow: 0 8px 30px rgba(74,46,26,0.12);\
+      display: flex; align-items: center; gap: 0.75rem;\
+      animation: float 4s ease-in-out infinite;\
+      z-index: 10;\
+    \}\
+    .float-card:nth-child(2) \{ animation-delay: -1.5s; \}\
+    .float-card:nth-child(3) \{ animation-delay: -3s; \}\
+\
+    @keyframes float \{\
+      0%, 100% \{ transform: translateY(0px); \}\
+      50% \{ transform: translateY(-8px); \}\
+    \}\
+\
+    .card-tool \{ top: 18%; right: -30px; \}\
+    .card-cert \{ bottom: 26%; left: -40px; \}\
+    .card-loc \{ top: 55%; right: -20px; \}\
+\
+    .card-icon \{\
+      width: 36px; height: 36px;\
+      border-radius: 10px;\
+      display: flex; align-items: center; justify-content: center;\
+      font-size: 1.1rem;\
+      flex-shrink: 0;\
+    \}\
+    .icon-orange \{ background: rgba(193,105,79,0.12); \}\
+    .icon-blue \{ background: rgba(70,130,180,0.12); \}\
+    .icon-green \{ background: rgba(80,160,100,0.12); \}\
+\
+    .card-text \{ display: flex; flex-direction: column; \}\
+    .card-title \{ font-size: 0.78rem; font-weight: 500; color: var(--warm-brown); white-space: nowrap; \}\
+    .card-sub \{ font-size: 0.68rem; color: var(--muted); white-space: nowrap; \}\
+\
+    /* \uc0\u9472 \u9472  TOOLS STRIP \u9472 \u9472  */\
+    .tools-strip \{\
+      background: var(--white);\
+      border-top: 1px solid rgba(193,105,79,0.1);\
+      border-bottom: 1px solid rgba(193,105,79,0.1);\
+      padding: 1.5rem 5rem;\
+      display: flex;\
+      align-items: center;\
+      gap: 1rem;\
+      overflow: hidden;\
+    \}\
+    .tools-label \{\
+      font-size: 0.72rem; font-weight: 500;\
+      text-transform: uppercase; letter-spacing: 0.1em;\
+      color: var(--muted);\
+      white-space: nowrap;\
+      flex-shrink: 0;\
+    \}\
+    .tools-divider \{\
+      width: 1px; height: 24px;\
+      background: var(--sand);\
+      flex-shrink: 0;\
+    \}\
+    .tools-list \{\
+      display: flex; gap: 0.6rem; flex-wrap: wrap;\
+    \}\
+    .tool-pill \{\
+      background: var(--cream);\
+      border: 1px solid var(--sand);\
+      border-radius: 100px;\
+      padding: 0.3rem 0.9rem;\
+      font-size: 0.8rem;\
+      color: var(--warm-brown);\
+      font-weight: 400;\
+      transition: border-color 0.2s, color 0.2s;\
+    \}\
+    .tool-pill:hover \{ border-color: var(--terracotta); color: var(--terracotta); \}\
+\
+    /* \uc0\u9472 \u9472  FEATURED PROJECT \u9472 \u9472  */\
+    .section \{\
+      padding: 6rem 5rem;\
+    \}\
+\
+    .section-label \{\
+      display: flex; align-items: center; gap: 0.75rem;\
+      font-size: 0.75rem; font-weight: 500;\
+      text-transform: uppercase; letter-spacing: 0.12em;\
+      color: var(--terracotta);\
+      margin-bottom: 1.2rem;\
+    \}\
+    .section-label::after \{\
+      content: '';\
+      height: 1px; width: 40px;\
+      background: var(--terracotta);\
+      opacity: 0.4;\
+    \}\
+\
+    .section-title \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: clamp(2rem, 3vw, 2.8rem);\
+      color: var(--warm-brown);\
+      margin-bottom: 3.5rem;\
+      max-width: 500px;\
+    \}\
+\
+    .featured-card \{\
+      background: var(--white);\
+      border-radius: 28px;\
+      overflow: hidden;\
+      display: grid;\
+      grid-template-columns: 1.1fr 1fr;\
+      box-shadow: 0 12px 50px rgba(74,46,26,0.08);\
+      transition: transform 0.3s, box-shadow 0.3s;\
+    \}\
+    .featured-card:hover \{\
+      transform: translateY(-4px);\
+      box-shadow: 0 20px 60px rgba(74,46,26,0.13);\
+    \}\
+\
+    .fc-visual \{\
+      background: linear-gradient(135deg, #c1694f 0%, #e8a07a 50%, #f5c9a0 100%);\
+      min-height: 380px;\
+      display: flex; align-items: center; justify-content: center;\
+      font-size: 5rem;\
+      position: relative;\
+      overflow: hidden;\
+    \}\
+    .fc-visual::before \{\
+      content: '';\
+      position: absolute; inset: 0;\
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");\
+    \}\
+    .fc-emoji \{ position: relative; z-index: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2)); \}\
+\
+    .fc-content \{\
+      padding: 3rem;\
+      display: flex;\
+      flex-direction: column;\
+      justify-content: space-between;\
+    \}\
+\
+    .fc-tag \{\
+      display: inline-block;\
+      background: rgba(193,105,79,0.1);\
+      color: var(--terracotta);\
+      font-size: 0.72rem;\
+      font-weight: 500;\
+      text-transform: uppercase;\
+      letter-spacing: 0.1em;\
+      padding: 0.3rem 0.8rem;\
+      border-radius: 100px;\
+      margin-bottom: 1rem;\
+      width: fit-content;\
+    \}\
+\
+    .fc-title \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1.6rem;\
+      line-height: 1.3;\
+      color: var(--warm-brown);\
+      margin-bottom: 1rem;\
+    \}\
+\
+    .fc-desc \{\
+      font-size: 0.92rem;\
+      line-height: 1.75;\
+      color: var(--muted);\
+      margin-bottom: 1.5rem;\
+    \}\
+\
+    .fc-chips \{ display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; \}\
+    .fc-chip \{\
+      background: var(--cream);\
+      border: 1px solid var(--sand);\
+      border-radius: 100px;\
+      padding: 0.25rem 0.75rem;\
+      font-size: 0.75rem;\
+      color: var(--muted);\
+    \}\
+\
+    .fc-link \{\
+      display: inline-flex; align-items: center; gap: 0.5rem;\
+      color: var(--terracotta);\
+      text-decoration: none;\
+      font-size: 0.9rem; font-weight: 500;\
+      transition: gap 0.2s;\
+    \}\
+    .fc-link:hover \{ gap: 0.8rem; \}\
+    .fc-link span \{ font-size: 1.1rem; \}\
+\
+    /* \uc0\u9472 \u9472  OTHER PROJECTS GRID \u9472 \u9472  */\
+    .projects-grid \{\
+      display: grid;\
+      grid-template-columns: repeat(3, 1fr);\
+      gap: 1.5rem;\
+      margin-top: 0;\
+    \}\
+\
+    .proj-card \{\
+      background: var(--white);\
+      border-radius: 20px;\
+      padding: 2rem;\
+      box-shadow: 0 4px 20px rgba(74,46,26,0.06);\
+      transition: transform 0.25s, box-shadow 0.25s;\
+      display: flex; flex-direction: column; gap: 1rem;\
+      text-decoration: none;\
+      color: inherit;\
+    \}\
+    .proj-card:hover \{\
+      transform: translateY(-3px);\
+      box-shadow: 0 10px 35px rgba(74,46,26,0.1);\
+    \}\
+    .proj-icon \{\
+      font-size: 2rem;\
+      width: 54px; height: 54px;\
+      display: flex; align-items: center; justify-content: center;\
+      background: var(--cream);\
+      border-radius: 14px;\
+    \}\
+    .proj-type \{\
+      font-size: 0.7rem;\
+      text-transform: uppercase;\
+      letter-spacing: 0.1em;\
+      color: var(--terracotta);\
+      font-weight: 500;\
+    \}\
+    .proj-title \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1rem;\
+      line-height: 1.4;\
+      color: var(--warm-brown);\
+    \}\
+    .proj-desc \{\
+      font-size: 0.82rem;\
+      line-height: 1.65;\
+      color: var(--muted);\
+      flex: 1;\
+    \}\
+    .proj-arrow \{\
+      font-size: 0.85rem;\
+      color: var(--terracotta);\
+      font-weight: 500;\
+      margin-top: auto;\
+    \}\
+\
+    /* \uc0\u9472 \u9472  FOOTER \u9472 \u9472  */\
+    footer \{\
+      background: var(--warm-brown);\
+      color: rgba(253,246,238,0.7);\
+      padding: 3rem 5rem;\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: center;\
+    \}\
+    .footer-name \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1.3rem;\
+      color: var(--cream);\
+    \}\
+    .footer-contact \{\
+      display: flex; flex-direction: column;\
+      align-items: flex-end; gap: 0.3rem;\
+    \}\
+    .footer-contact a \{\
+      color: var(--terra-light);\
+      text-decoration: none;\
+      font-size: 0.88rem;\
+      transition: color 0.2s;\
+    \}\
+    .footer-contact a:hover \{ color: var(--sand); \}\
+    .footer-loc \{ font-size: 0.82rem; \}\
+\
+    /* \uc0\u9472 \u9472  ANIMATIONS \u9472 \u9472  */\
+    @keyframes fadeUp \{\
+      from \{ opacity: 0; transform: translateY(30px); \}\
+      to   \{ opacity: 1; transform: translateY(0); \}\
+    \}\
+\
+    .fade-in \{\
+      opacity: 0;\
+      transform: translateY(24px);\
+      transition: opacity 0.7s ease, transform 0.7s ease;\
+    \}\
+    .fade-in.visible \{\
+      opacity: 1;\
+      transform: none;\
+    \}\
+\
+    /* \uc0\u9472 \u9472  RESPONSIVE \u9472 \u9472  */\
+    @media (max-width: 900px) \{\
+      nav \{ padding: 1rem 2rem; \}\
+      .hero \{ grid-template-columns: 1fr; \}\
+      .hero-right \{ display: none; \}\
+      .hero-left \{ padding: 3rem 2rem; \}\
+      .section \{ padding: 4rem 2rem; \}\
+      .featured-card \{ grid-template-columns: 1fr; \}\
+      .fc-visual \{ min-height: 200px; \}\
+      .projects-grid \{ grid-template-columns: 1fr; \}\
+      .tools-strip \{ padding: 1.5rem 2rem; \}\
+      footer \{ flex-direction: column; gap: 1.5rem; text-align: center; \}\
+      .footer-contact \{ align-items: center; \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+\
+<!-- NAV -->\
+<nav>\
+  <a class="nav-logo" href="#">Yixin Jiang</a>\
+  <ul class="nav-links">\
+    <li><a href="#about">About</a></li>\
+    <li><a href="#projects">Projects</a></li>\
+    <li><a href="mailto:yixin0229@gmail.com">Contact</a></li>\
+  </ul>\
+</nav>\
+\
+<!-- HERO -->\
+<section class="hero">\
+  <div class="hero-left">\
+    <div class="hero-tag">Available for opportunities</div>\
+\
+    <h1 class="hero-heading">\
+      I turn complex ideas into learning experiences people <em>actually remember.</em>\
+    </h1>\
+\
+    <p class="hero-sub">\
+      Hi, I'm Yixin \'97 an instructional designer and eLearning developer based in Montr\'e9al. I craft scenario-based, learner-centered experiences that make hard skills feel natural and achievable.\
+    </p>\
+\
+    <div class="hero-ctas">\
+      <a class="btn-primary" href="#projects">View My Work \uc0\u8594 </a>\
+      <a class="btn-secondary" href="#about">About Me</a>\
+    </div>\
+\
+    <div class="hero-stats">\
+      <div class="stat-item">\
+        <span class="stat-num">3+</span>\
+        <span class="stat-label">Projects built</span>\
+      </div>\
+      <div class="stat-item">\
+        <span class="stat-num">M.Ed</span>\
+        <span class="stat-label">Learning Design</span>\
+      </div>\
+      <div class="stat-item">\
+        <span class="stat-num">Rise 360</span>\
+        <span class="stat-label">& Vyond</span>\
+      </div>\
+    </div>\
+  </div>\
+\
+  <div class="hero-right">\
+    <div class="photo-frame">\
+      <div class="photo-bg"></div>\
+      <div class="photo-placeholder">\
+        <span class="photo-hint">\uc0\u8592  Replace with your photo</span>\
+      </div>\
+\
+      <!-- Floating cards -->\
+      <div class="float-card card-tool">\
+        <div class="card-icon icon-orange">\uc0\u55356 \u57256 </div>\
+        <div class="card-text">\
+          <span class="card-title">Rise 360 + Vyond</span>\
+          <span class="card-sub">eLearning tools</span>\
+        </div>\
+      </div>\
+\
+      <div class="float-card card-cert">\
+        <div class="card-icon icon-blue">\uc0\u55356 \u57235 </div>\
+        <div class="card-text">\
+          <span class="card-title">M.Ed in Learning Design</span>\
+          <span class="card-sub">Instructional Design</span>\
+        </div>\
+      </div>\
+\
+      <div class="float-card card-loc">\
+        <div class="card-icon icon-green">\uc0\u55357 \u56525 </div>\
+        <div class="card-text">\
+          <span class="card-title">Montr\'e9al, QC</span>\
+          <span class="card-sub">Open to remote</span>\
+        </div>\
+      </div>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- TOOLS STRIP -->\
+<div class="tools-strip">\
+  <span class="tools-label">My toolkit</span>\
+  <div class="tools-divider"></div>\
+  <div class="tools-list">\
+    <span class="tool-pill">Rise 360</span>\
+    <span class="tool-pill">Vyond</span>\
+    <span class="tool-pill">Articulate Storyline</span>\
+    <span class="tool-pill">ADDIE Model</span>\
+    <span class="tool-pill">Action Mapping</span>\
+    <span class="tool-pill">Bloom's Taxonomy</span>\
+    <span class="tool-pill">Storyboarding</span>\
+    <span class="tool-pill">UX Writing</span>\
+    <span class="tool-pill">Canva</span>\
+  </div>\
+</div>\
+\
+<!-- FEATURED PROJECT -->\
+<section class="section" id="projects">\
+  <div class="fade-in">\
+    <div class="section-label">Featured Project</div>\
+    <h2 class="section-title">My latest work in the field</h2>\
+  </div>\
+\
+  <div class="featured-card fade-in">\
+    <div class="fc-visual">\
+      <span class="fc-emoji">\uc0\u55356 \u57312 </span>\
+    </div>\
+    <div class="fc-content">\
+      <div>\
+        <span class="fc-tag">eLearning \'b7 Scenario-based</span>\
+        <h3 class="fc-title">Dealing with Conflict as a Resident Assistant</h3>\
+        <p class="fc-desc">\
+          A microlearning course designed to equip new RAs with conflict resolution strategies \'97 built with realistic dormitory scenarios, branching decisions, and reflective practice.\
+        </p>\
+        <div class="fc-chips">\
+          <span class="fc-chip">Rise 360</span>\
+          <span class="fc-chip">Vyond</span>\
+          <span class="fc-chip">ADDIE</span>\
+          <span class="fc-chip">Storyboard</span>\
+          <span class="fc-chip">Action Mapping</span>\
+        </div>\
+      </div>\
+      <a class="fc-link" href="https://rise.articulate.com/share/IPAjiCqQmT-DQz0z26svrsXan3wchhp9" target="_blank">\
+        Experience the course <span>\uc0\u8594 </span>\
+      </a>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- OTHER PROJECTS -->\
+<section class="section" style="padding-top: 0;" id="about">\
+  <div class="fade-in">\
+    <div class="section-label">More Work</div>\
+    <h2 class="section-title">Research & Learning Design</h2>\
+  </div>\
+\
+  <div class="projects-grid fade-in">\
+    <a class="proj-card" href="https://docs.google.com/presentation/d/1p9zI5eblCZLaQaPEZpxzkwdM2ornaQQZxUIVzS6m-Wg/edit" target="_blank">\
+      <div class="proj-icon">\uc0\u55358 \u56800 </div>\
+      <span class="proj-type">Literature Review</span>\
+      <div class="proj-title">Self-Efficacy & ADHD in Online Learning</div>\
+      <p class="proj-desc">Examining how self-belief shapes learning outcomes for students with ADHD in online environments \'97 and what facilitators can do about it.</p>\
+      <span class="proj-arrow">Explore \uc0\u8594 </span>\
+    </a>\
+\
+    <a class="proj-card" href="https://docs.google.com/document/d/18_bE1zwAfbGwuIbXEHiGtI53uHwCnhOC/edit" target="_blank">\
+      <div class="proj-icon">\uc0\u55357 \u56561 </div>\
+      <span class="proj-type">Research Paper</span>\
+      <div class="proj-title">Facebook as a Learning Tool Through Connectivism</div>\
+      <p class="proj-desc">Analyzing how learners build knowledge through social media networks, using Siemens' connectivism framework as a lens.</p>\
+      <span class="proj-arrow">Explore \uc0\u8594 </span>\
+    </a>\
+\
+    <a class="proj-card" href="https://docs.google.com/presentation/d/16q-ABpUA_DlRtQMlVOWhE08_voiy72HXNTZwC7Jj7jk/edit" target="_blank">\
+      <div class="proj-icon">\uc0\u55357 \u56826 \u65039 </div>\
+      <span class="proj-type">Curriculum Design</span>\
+      <div class="proj-title">Geography Lesson Design with Bloom's Taxonomy</div>\
+      <p class="proj-desc">A Secondary 1 geography unit structured with the KUD framework and Bloom's Taxonomy \'97 from knowing facts to creating their own city.</p>\
+      <span class="proj-arrow">Explore \uc0\u8594 </span>\
+    </a>\
+  </div>\
+</section>\
+\
+<!-- FOOTER -->\
+<footer>\
+  <div>\
+    <div class="footer-name">Yixin Jiang</div>\
+    <div style="margin-top: 0.4rem; font-size: 0.82rem;">Instructional Designer & eLearning Developer</div>\
+  </div>\
+  <div class="footer-contact">\
+    <a href="mailto:yixin0229@gmail.com">yixin0229@gmail.com</a>\
+    <span class="footer-loc">\uc0\u55357 \u56525  Montr\'e9al, QC, Canada</span>\
+  </div>\
+</footer>\
+\
+<script>\
+  // Scroll-triggered fade-ins\
+  const observer = new IntersectionObserver((entries) => \{\
+    entries.forEach((e, i) => \{\
+      if (e.isIntersecting) \{\
+        setTimeout(() => e.target.classList.add('visible'), i * 120);\
+      \}\
+    \});\
+  \}, \{ threshold: 0.1 \});\
+\
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));\
+</script>\
+\
+</body>\
+</html>}
